@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Title;
-  src: url(../fonts/Helvetica\ Neue\ Regular.otf) format("truetype");
+  font-family: Random;
+  src: url(../fonts/RG-StandardBold.ttf) format("truetype");
 }
 .card {
   width: 200px;
@@ -24,6 +24,6 @@
 }
 
 figcaption {
-  font-family: Title;
+  font-family: Random;
   font-size: 32px;
 }
