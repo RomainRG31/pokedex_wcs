@@ -1,5 +1,7 @@
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
+import PropTypes from "prop-types";
+
 const pokemonList = [
   {
     name: "Bulbasaur",
@@ -10,6 +12,13 @@ const pokemonList = [
     // imgSrc: "./src/assets/img/mew.png",
   },
 ];
+
+PokemonCard.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
+  }).isRequired,
+};
 
 function App() {
   return (
