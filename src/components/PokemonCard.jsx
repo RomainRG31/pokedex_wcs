@@ -1,19 +1,7 @@
 import React from "react";
 import "./PokemonCard.css";
 
-const pokemonList = [
-  {
-    name: "Bulbasaur",
-    imgSrc: "./src/assets/img/bubli.png",
-  },
-  {
-    name: "Mew",
-    // imgSrc: "./src/assets/img/mew.png",
-  },
-];
-
-function PokemonCard() {
-  let pokemon = pokemonList[1];
+function PokemonCard({ pokemon }) {
   return (
     <>
       <figure className="card">
