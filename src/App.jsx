@@ -38,17 +38,15 @@ PokemonCard.propTypes = {
 };
 
 function App() {
-  const [pokemonIndex, setPokemonIndex] = useState(0);
-
+  const [currentPokemon, setCurrentPokemon] = useState(pokemonList[0]);
+  const changePokemon = (pokemon) => {
+    setCurrentPokemon(pokemon);
+  };
   return (
-    <>
-      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      <NavBar
-        pokemonIndex={pokemonIndex}
-        setPokemonIndex={setPokemonIndex}
-        pokemonList={pokemonList}
-      />
-    </>
+    <div className="principal-container">
+      <PokemonCard pokemon={currentPokemon} />
+      <NavBar pokemonList={pokemonList} changePokemon={changePokemon} />
+    </div>
   );
 }
 
