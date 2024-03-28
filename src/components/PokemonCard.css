@@ -3,7 +3,11 @@
   src: url(../fonts/RG-StandardBold.ttf) format("truetype");
 }
 .card {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   width: 200px;
+  height: 200px;
   padding: 1rem;
   background-color: lightgreen;
   border-radius: 5px;
