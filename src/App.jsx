@@ -2,7 +2,7 @@ import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import PropTypes from "prop-types";
 import NavBar from "./components/NavBar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const pokemonList = [
   {
@@ -40,8 +40,16 @@ PokemonCard.propTypes = {
 function App() {
   const [currentPokemon, setCurrentPokemon] = useState(pokemonList[0]);
   const changePokemon = (pokemon) => {
+    if (pokemon.name === "pikachu") {
+      alert("pika pikachu !!!");
+    }
     setCurrentPokemon(pokemon);
   };
+
+  useEffect(() => {
+    alert("hello pokemon trainer :)");
+  }, []);
+
   return (
     <div className="principal-container">
       <PokemonCard pokemon={currentPokemon} />
